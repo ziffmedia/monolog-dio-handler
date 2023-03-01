@@ -1,0 +1,23 @@
+{
+    "name": "ziffmedia/monolog-dio-handler",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ralph Schindler",
+            "email": "ralph.schindler@ziffmedia.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "monolog/monolog": "^2.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "ZiffMedia\\MonologDioHandler\\": "src/"
+        }
+    }
+}
