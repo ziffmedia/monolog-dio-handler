@@ -6,6 +6,7 @@ use Monolog\Formatter\FormatterInterface;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Logger;
+use Monolog\LogRecord;
 
 class MonologDioHandler extends AbstractProcessingHandler
 {
@@ -32,7 +33,7 @@ class MonologDioHandler extends AbstractProcessingHandler
         parent::close();
     }
 
-    protected function write(array $record): void
+    protected function write(LogRecord $record): void
     {
         if (! is_resource($this->resource)) {
             $this->resource = dio_open($this->path, O_WRONLY);
