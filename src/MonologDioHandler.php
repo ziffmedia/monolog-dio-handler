@@ -15,7 +15,7 @@ class MonologDioHandler extends AbstractProcessingHandler
      */
     protected $resource;
 
-    public function __construct(protected string $path, $level = Logger::DEBUG, bool $bubble = true, FormatterInterface $formatter = null)
+    public function __construct(protected string $path, $level = Logger::DEBUG, bool $bubble = true, ?FormatterInterface $formatter = null)
     {
         parent::__construct($level, $bubble);
 
